@@ -81,37 +81,37 @@ else:
 # Following are the fixed values of C and H: C is 50. H is 30. D  is  the  variable  whose  values  
 # should  be  input  to  your  program  in  a  comma-separated sequence.
 
-# import math
+import math
 
-# numbers = raw_input("Provide D: ")
-# numbers = numbers.split(',')
+numbers = raw_input("Provide D: ")
+numbers = numbers.split(',')
 
-# result_list = []
-# for D in numbers:
-#     Q = round(math.sqrt(2 * 50 * int(D) / 30))
-#     result_list.append(Q)
+result_list = []
+for D in numbers:
+    Q = round(math.sqrt(2 * 50 * int(D) / 30))
+    result_list.append(Q)
 
-# print(result_list)
+print(result_list)
 
 
 # 5. Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. 
 
 
-# user_input = raw_input("Enter values for row and column number: ")
-# rows, cols = user_input.split(",")
-# rows = int(rows)
-# cols = int(cols)
-# grid = []
-# def array_td(rows, cols):
-#     for x in range(rows):
-#         row = []
-#         for y in range(cols):
-#             row.append(x * y)
-#         grid.append(row)
-#         print(row)
-# array_td(rows,cols)
-# print()
-# print(grid)
+user_input = raw_input("Enter values for row and column number: ")
+rows, cols = user_input.split(",")
+rows = int(rows)
+cols = int(cols)
+grid = []
+def array_td(rows, cols):
+    for x in range(rows):
+        row = []
+        for y in range(cols):
+            row.append(x * y)
+        grid.append(row)
+        print(row)
+array_td(rows,cols)
+print()
+print(grid)
 
 
 # 6> Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically. 
@@ -121,9 +121,9 @@ else:
 # bag,hello,without,world
 
 
-# items = input("Input comma separated sequence of words")
-# words = [word for word in items.split(",")]
-# print(",".join(sorted(list(set(words)))))
+items = input("Input comma separated sequence of words")
+words = [word for word in items.split(",")]
+print(",".join(sorted(list(set(words)))))
 
 
 
@@ -133,13 +133,13 @@ else:
 # Example: Input given: 0100,0011,1010,1001 
 # Then the output should be: 1010
 
-# items = []
-# num = [x for x in raw_input().split(',')]
-# for p in num:
-#     x = int(p, 2)
-#     if not x%5:
-#         items.append(p)
-# print('sequence items',items)
+items = []
+num = [x for x in raw_input().split(',')]
+for p in num:
+    x = int(p, 2)
+    if not x%5:
+        items.append(p)
+print('sequence items',items)
 
 
 
@@ -185,3 +185,16 @@ checkKey(dict, key)
 
 
 # 10>. Program to prompt whether we need to add or modify the key/value inside the dictionary.
+
+dictionary = {}
+input_string = str(input("Do you want to Add / Modify dictionary or Exit?"))
+
+if input_string in ['Add', 'Modify']:
+    user_input = [input('key and value') for i in range(2)]
+    dictionary[user_input[0]] = user_input[1]
+    print("updated dict", dictionary)
+else:
+    print("undefined option")
+
+
+
